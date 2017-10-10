@@ -190,5 +190,23 @@
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
         <dex dex="/Users/muhtar/Public/ReactNativeProjects/rn-test-case/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_6105bdb6d6da369e77be9295c21cc694b4a3156e.jar" />
     </item>
+    <item
+        is-multidex="false"
+        jar="/Users/muhtar/Public/ReactNativeProjects/rn-test-case/android/app/build/intermediates/exploded-aar/testcase/realm/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="47d08d88fd83fd8aeb80910443f0d4e186e7e99f">
+        <dex dex="/Users/muhtar/Public/ReactNativeProjects/rn-test-case/android/app/build/intermediates/pre-dexed/debug/testcase-realm-unspecified_2ca905a2561a1f0d8c016b73a342f0122eb9303c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/muhtar/.gradle/caches/modules-2/files-2.1/org.nanohttpd/nanohttpd/2.2.0/73a02117620b6cc7683a1ed6ae24c2f36e2a715/nanohttpd-2.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="073a02117620b6cc7683a1ed6ae24c2f36e2a715">
+        <dex dex="/Users/muhtar/Public/ReactNativeProjects/rn-test-case/android/app/build/intermediates/pre-dexed/debug/nanohttpd-2.2.0_d5b7ca2c2fffe62100ea539a1c29d9ac2a2bbfb2.jar" />
+    </item>
 
 </items>
