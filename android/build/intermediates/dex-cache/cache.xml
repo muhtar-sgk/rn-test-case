@@ -201,6 +201,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/muhtar/Public/ReactNativeProjects/rn-test-case/android/app/build/intermediates/exploded-aar/testcase/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/muhtar/Public/ReactNativeProjects/rn-test-case/android/app/build/intermediates/pre-dexed/debug/testcase-react-native-vector-icons-unspecified_d100aed5717f3c809fc17a66108f529528dd30cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/muhtar/.gradle/caches/modules-2/files-2.1/org.nanohttpd/nanohttpd/2.2.0/73a02117620b6cc7683a1ed6ae24c2f36e2a715/nanohttpd-2.2.0.jar"
         jumboMode="false"
         optimize="true"
