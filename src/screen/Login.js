@@ -8,8 +8,6 @@ var realm;
 
 class Login extends Component{
     render(){
-        //let nama = realm.objects('user').filtered('namalengkap = "muhtar"');
-        //console.log('nama '+nama.length);
         return(
             <View style={styles.container}>
                 <EditText
