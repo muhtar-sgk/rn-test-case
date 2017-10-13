@@ -35,5 +35,11 @@ export default {
         marginTop:10,
         width: width - 40,
         height: 50
-    }
+    },
+    label: {
+        marginTop:10,
+        fontSize: 15,
+        alignSelf: 'flex-start',
+        marginLeft: 10,
+    },
 }

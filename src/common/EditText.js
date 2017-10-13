@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextInput,View,Text} from 'react-native';
+import {TextInput} from 'react-native';
 import styles from '../styles/MainStyles';
 
 export const EditText = ({onChangeText,placeholder,secureTextEntry}) => {
