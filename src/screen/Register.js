@@ -4,47 +4,34 @@ import styles from '../styles/MainStyles';
 import {EditText} from '../common/EditText';
 import {Button} from '../common/Button';
 import Realm from 'realm';
-var realm;
+import RealmSchema from '../config/RealmSchema';
 
 class Register extends Component{
     constructor(props){
         super(props);
-        realm = new Realm({
-            schema: [
-                {
-                    name: 'user',
-                    properties: {
-                        namalengkap: 'string',
-                        username: 'string',
-                        email: 'string',
-                        no_telpon: 'string',
-                        password: 'string'
-                    }
-                }
-            ],
-            schemaVersion: 5
-        });
         this.state = {
             namalengkap: '',
             username: '',
             email: '',
-            no_telpon: '',
+            telepon: '',
             password: '',
             ulangi_password: '' 
         }
-        this.addData = this.addData.bind(this);
+        this.addUser = this.addUser.bind(this);
     }
 
-    addData(){
-        realm.write(() => {
-            realm.create('user', {namalengkap: this.state.namalengkap, username: this.state.username,
-            email: this.state.email, no_telpon: this.state.no_telpon, password: this.state.password});
+    addUser(){
+        RealmSchema.write(() => {
+            RealmSchema.create('user', {namalengkap: this.state.namalengkap, username: this.state.username,
+            email: this.state.email, telepon: this.state.telepon, password: this.state.password});
             this.forceUpdate();
         });
+
+        this.props.navigation.navigate('Login');
     }
 
     render(){
-        let user = realm.objects('user').filtered('namalengkap = "muhtar"');
+        let user = RealmSchema.objects('user').filtered('namalengkap = "muhtar"');
         console.log('data user '+user.length);
         return(
             <View style={styles.containerRegister}>
@@ -61,8 +48,8 @@ class Register extends Component{
                     onChangeText={(email) => this.setState({email})}
                 />
                 <EditText
-                    placeholder="no telpon"
-                    onChangeText={(no_telpon) => this.setState({no_telpon})}
+                    placeholder="telepon"
+                    onChangeText={(telepon) => this.setState({telepon})}
                 />
                 <EditText
                     placeholder="password"
@@ -74,7 +61,7 @@ class Register extends Component{
                     onChangeText={(ulangi_password) => this.setState({ulangi_password})}
                     secureTextEntry
                 />
-                <Button onPress={() => this.addData()}>Register</Button>
+                <Button onPress={() => this.addUser()}>Register</Button>
             </View>
         );
     }
