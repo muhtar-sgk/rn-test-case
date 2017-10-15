@@ -42,4 +42,8 @@ export default {
         alignSelf: 'flex-start',
         marginLeft: 10,
     },
+    datePicker: {
+        width: width - 40,
+        marginLeft: 20
+    }
 }

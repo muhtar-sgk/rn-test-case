@@ -3,6 +3,7 @@ import {View,Text,Picker,ToastAndroid} from 'react-native';
 import styles from '../styles/MainStyles';
 import {Button} from '../common/Button';
 import RealmSchema from '../config/RealmSchema';
+import DatePicker from 'react-native-datepicker';
 
 class Home extends Component{
     constructor(props){
@@ -11,7 +12,7 @@ class Home extends Component{
             cityFrom: '',
             cityTo: '',
             seatClass: '',
-            departure:'1 Jan 2017',
+            departure:'2017-05-15',
             adult: '',
             child: ''
         };
@@ -50,8 +51,8 @@ class Home extends Component{
     }
 
     render(){
-        let booking = RealmSchema.objects('booking').filtered('departure = "1 Jan 2017"');
-        console.log('data booking '+booking.length);
+        let departure = RealmSchema.objects('booking').filtered('departure = "2017-05-31"');
+        console.log('tanggal '+ departure.length);
         return(
             <View>
                 <Text style={styles.label}>From</Text>
@@ -107,6 +108,12 @@ class Home extends Component{
                     <Picker.Item label = "9" value = "9"/>
                     <Picker.Item label = "10" value = "10"/>
                 </Picker>
+                <DatePicker
+                    style={styles.datePicker}
+                    date={this.state.departure}
+                    onDateChange={(departure) => {this.setState({departure: departure})}}
+                />
+                <Text style={styles.label}></Text>
                 <Text style={styles.label}></Text>
                 <View style={styles.container}>
                     <Button onPress={() => this.addBooking()}>Booking</Button>
